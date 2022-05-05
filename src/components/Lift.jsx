@@ -9,7 +9,7 @@ export const Lift = ({ data, setData, floorNumber, liftNumber }) => {
   // console.table(data)
   return (
     <div style={liftStyle}>
-      <p style={{ color: "white" }}>{liftNumber + 1}</p>
+      {/* <p style={{ color: "white" }}>{liftNumber + 1}</p> */}
     </div>
   );
 };

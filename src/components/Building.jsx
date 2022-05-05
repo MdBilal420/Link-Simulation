@@ -13,7 +13,7 @@ export const Building = ({ data, setData }) => {
             data={data}
             setData={setData}
             floorNumber={data.length - idx}
-            key={floor[idx]}
+            key={idx}
           />
         ))}
     </div>
