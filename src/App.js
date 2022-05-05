@@ -5,13 +5,13 @@ import { useState } from "react";
 import { Building } from "./components/Building";
 let mst = [
   [1, 0, 1],
-  [0, 1, 1],
+  [0, 1, 0],
   [0, 0, 0]
 ];
 export default function App() {
   const [floor, setFloor] = useState(0);
   const [lift, setLift] = useState(0);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(mst);
 
   const createUI = () => {
     let floorArr = [];
@@ -48,7 +48,7 @@ export default function App() {
       <input type="text" onChange={(e) => setLift(e.target.value)} /> <br />
       <button onClick={createUI}>Create</button>
       <button onClick={() => test(2, 3)}>test</button>
-      {/* {data && <Building data={data} />} */}
+      {data && <Building data={data} setData={setData} />}
     </div>
   );
 }
